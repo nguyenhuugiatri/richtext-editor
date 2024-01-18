@@ -63,22 +63,26 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
   switch (type) {
     case 'words':
       return (
-        <span key={generateKey()} className={className} style={css}>
-          {input.value}
-        </span>
+        <>
+          <span key={generateKey()} className={className} style={css}>
+            {input.value}
+          </span>{' '}
+        </>
       )
 
     case 'link':
       return (
-        <NextLink
-          key={generateKey()}
-          className={cn('text-text-color-highlight underline', className)}
-          target="_blank"
-          href={input.href}
-          style={css}
-        >
-          {input.value}
-        </NextLink>
+        <>
+          <NextLink
+            key={generateKey()}
+            className={cn('text-text-color-highlight underline', className)}
+            target="_blank"
+            href={input.href}
+            style={css}
+          >
+            {input.value}
+          </NextLink>{' '}
+        </>
       )
 
     case 'paraph':
