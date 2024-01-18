@@ -1,0 +1,115 @@
+const { createSecureHeaders } = require('next-secure-headers')
+
+const trustedSrc = [
+  `'self'`,
+  `'unsafe-eval'`,
+  '*.skymavis.one',
+  '*.skymavis.com',
+  '*.axieinfinity.com',
+  '*.roninchain.com',
+]
+
+const cspSecurityHeaders = createSecureHeaders({
+  xssProtection: 'block-rendering',
+  contentSecurityPolicy: {
+    directives: {
+      baseURI: `'self'`,
+      defaultSrc: [
+        ...trustedSrc,
+        '*.googleapis.com',
+        '*.googletagmanager.com',
+        '*.google-analytics.com',
+        '*.geevisit.com',
+        '*.geetest.com',
+      ],
+      scriptSrc: [
+        ...trustedSrc,
+        `'unsafe-inline'`,
+        '*.googleapis.com',
+        '*.googletagmanager.com',
+        '*.google-analytics.com',
+        '*.geetest.com',
+        'api.geevisit.com',
+        'connect.facebook.net',
+        'apis.google.com',
+      ],
+      workerSrc: [
+        ...trustedSrc,
+        'blob:',
+        '*.googleapis.com',
+        '*.googletagmanager.com',
+        '*.google-analytics.com',
+        '*.geetest.com',
+        'api.geevisit.com',
+        'connect.facebook.net',
+        'apis.google.com',
+      ],
+      connectSrc: [
+        ...trustedSrc,
+        'wss://*.walletconnect.com',
+        '*.walletconnect.com',
+        '*.googleapis.com',
+        '*.googletagmanager.com',
+        '*.google-analytics.com',
+        '*.geetest.com',
+        '*.sentry.io',
+        '*.uptimerobot.com',
+      ],
+      styleSrcAttr: [
+        ...trustedSrc,
+        `'unsafe-inline'`,
+        `'unsafe-hashes'`,
+        'fonts.googleapis.com',
+        '*.googleapis.com',
+        '*.googletagmanager.com',
+        '*.google-analytics.com',
+        '*.walletconnect.com',
+        '*.geevisit.com',
+        '*.geetest.com',
+      ],
+      styleSrc: [
+        ...trustedSrc,
+        'fonts.googleapis.com',
+        '*.googleapis.com',
+        '*.walletconnect.com',
+        '*.geevisit.com',
+        '*.geetest.com',
+        'fonts.gstatic.com',
+      ],
+      styleSrcElem: [
+        ...trustedSrc,
+        `'unsafe-inline'`,
+        '*.walletconnect.com',
+        'fonts.googleapis.com',
+        '*.googleapis.com',
+        '*.googletagmanager.com',
+        '*.google-analytics.com',
+        '*.geevisit.com',
+        '*.geetest.com',
+      ],
+      imgSrc: [
+        ...trustedSrc,
+        'data:',
+        'blob:',
+        '*.googleapis.com',
+        '*.googletagmanager.com',
+        '*.google-analytics.com',
+        '*.walletconnect.com',
+        '*.geevisit.com',
+        '*.geetest.com',
+        'cdn.jsdelivr.net',
+      ],
+      frameSrc: [...trustedSrc, 'accounts.google.com'],
+      fontSrc: [...trustedSrc, 'data:', 'fonts.gstatic.com'],
+      mediaSrc: [...trustedSrc, 'data:'],
+      objectSrc: ['none'],
+    },
+  },
+})
+
+cspSecurityHeaders.push({
+  key: 'X-DNS-Prefetch-Control',
+  value: 'on',
+})
+
+module.exports = { cspSecurityHeaders }

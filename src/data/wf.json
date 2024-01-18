@@ -1,0 +1,137 @@
+[
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  {
+    "type": "card",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1705509227-31.png",
+    "title": "5% chance to get Lord NFT",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+    "description": [
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "3.27%"
+          },
+          {
+            "type": "words",
+            "value": "Rare",
+            "color": "#0FA9FD"
+          }
+        ]
+      },
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "1.33%"
+          },
+          {
+            "type": "words",
+            "value": "Epic",
+            "color": "#9976FC"
+          }
+        ]
+      },
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "0.37%"
+          },
+          {
+            "type": "words",
+            "value": "Legendary",
+            "color": "#D89C00"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "card",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1705509216-21.png",
+    "title": "10 Random Unit NFT",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "description": [
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "5 x"
+          },
+          {
+            "type": "words",
+            "value": "Common",
+            "color": "#46F29A"
+          },
+          {
+            "type": "words",
+            "value": "or Uncommon "
+          }
+        ]
+      },
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "5 x"
+          },
+          {
+            "type": "words",
+            "value": "Rare",
+            "color": "#0AD2FF"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "card",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1705509227-31.png",
+    "title": "1 Skin NFT",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "description": [
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "90%"
+          },
+          {
+            "type": "words",
+            "value": "Epic",
+            "color": "#9976FC"
+          }
+        ]
+      },
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "10%"
+          },
+          {
+            "type": "words",
+            "value": "Legendary",
+            "color": "#D89C00"
+          }
+        ]
+      }
+    ]
+  },
+  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+]

@@ -1,0 +1,29 @@
+name: Dockerize Mavis Store
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+    paths:
+      - '**'
+    tags:
+      - 'v**'
+
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**'
+
+jobs:
+  scan:
+    uses: axieinfinity/workflows-samples/.github/workflows/security-basic-scan.yml@main
+
+  docker:
+    needs: scan
+    uses: axieinfinity/workflows-samples/.github/workflows/docker-build.yml@main
+    with:
+      image_repository: us-docker.pkg.dev/axs-infra-ops-8686/skymavis/mavis-store-app
+      dockerfile_path: Dockerfile
+    secrets: inherit
