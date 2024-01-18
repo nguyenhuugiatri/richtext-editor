@@ -39,6 +39,11 @@ type Row = ElementProps & {
   value: Content | Content[]
 }
 
+type Col = ElementProps & {
+  type: 'col'
+  value: Content | Content[]
+}
+
 type Card = ElementProps & {
   type: 'card'
   image: string | Image
@@ -47,7 +52,7 @@ type Card = ElementProps & {
   description: Texts
 }
 
-type Content = Texts | Image | Row | Card
+type Content = Texts | Image | Row | Col | Card
 
 export function convertToJSX(input: Content | Content[]): React.ReactNode {
   const generateKey = (): string => uniqueId()
@@ -123,6 +128,17 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
         </div>
       )
 
+    case 'col':
+      return (
+        <div
+          key={generateKey()}
+          className={cn('flex flex-col', className)}
+          style={css}
+        >
+          {convertToJSX(input.value)}
+        </div>
+      )
+
     case 'card':
       return (
         <div
@@ -162,7 +178,9 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
                   className: 'mb-8',
                   value: input.subtitle,
                 })}
-            <div className="grid gap-4">{convertToJSX(input.description)}</div>
+            <div className="flex flex-col space-y-4">
+              {convertToJSX(input.description)}
+            </div>
           </div>
         </div>
       )
