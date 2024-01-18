@@ -46,12 +46,39 @@
       }
     ]
   },
-  "Wild Forest example: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  {
+    "type": "paraph",
+    "value": [
+      {
+        "type": "words",
+        "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+      },
+      {
+        "type": "words",
+        "fontWeight": 700,
+        "value": "standard dummy"
+      },
+      {
+        "type": "words",
+        "value": "text ever since the 1500s, when an unknown"
+      },
+      {
+        "type": "words",
+        "fontWeight": 700,
+        "color": "#BF8B03",
+        "value": "printer took a galley"
+      },
+      {
+        "type": "words",
+        "value": "of type and scrambled it to make a type specimen book."
+      }
+    ]
+  },
   {
     "type": "card",
     "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1705509227-31.png",
     "title": "5% chance to get Lord NFT",
-    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "description": [
       {
         "type": "paraph",
@@ -104,7 +131,7 @@
     "type": "card",
     "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1705509216-21.png",
     "title": "10 Random Unit NFT",
-    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "description": [
       {
         "type": "paraph",
