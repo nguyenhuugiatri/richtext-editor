@@ -1,5 +1,52 @@
 [
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  {
+    "type": "paraph",
+    "value": [
+      {
+        "type": "paraph",
+        "value": [
+          {
+            "type": "words",
+            "value": "Paraph Example: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Check out the"
+          },
+          {
+            "type": "link",
+            "value": "link",
+            "href": "https://www.google.com"
+          },
+          {
+            "type": "words",
+            "value": "for more information."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "image",
+    "value": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1704369962-top-banner.png",
+    "description": "Image caption example."
+  },
+  {
+    "type": "row",
+    "value": [
+      {
+        "type": "image",
+        "value": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1704369962-top-banner.png",
+        "description": "Row example",
+        "width": "50%",
+        "paddingRight": 16
+      },
+      {
+        "type": "image",
+        "value": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1704369962-top-banner.png",
+        "description": "Row example",
+        "width": "50%",
+        "paddingLeft": 16
+      }
+    ]
+  },
+  "Wild Forest example: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
   {
     "type": "card",
     "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1705509227-31.png",

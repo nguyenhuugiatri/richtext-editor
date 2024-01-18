@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic'
 
+import { Layout } from '@/Components/Layout'
+
 const JSONEditor = dynamic(
   {
     loader: () =>
@@ -11,5 +13,9 @@ const JSONEditor = dynamic(
 )
 
 export default function TestPage() {
-  return <JSONEditor />
+  return (
+    <Layout full>
+      <JSONEditor />
+    </Layout>
+  )
 }

@@ -23,8 +23,8 @@ export const JSONEditor = () => {
   const [json, setJson] = useState(wfData)
 
   return (
-    <div className="flex h-screen w-screen">
-      <div className="w-2/5 [&>div]:h-full">
+    <div className="flex flex-col sm:flex-row">
+      <div className="sm:w-2/5 [&>div]:h-full">
         <JsonEditor
           mode="code"
           theme="ace/theme/dracula"
@@ -32,7 +32,7 @@ export const JSONEditor = () => {
           onChange={setJson}
         />
       </div>
-      <div className="w-3/5 p-16">{JSONToJSX(json)}</div>
+      <div className="p-24 sm:w-3/5">{JSONToJSX(JSON.stringify(json))}</div>
     </div>
   )
 }

@@ -13,8 +13,8 @@ body {
 
 :root {
   --max-screen-width: 1400px;
-  --header-height: 82px;
-  --footer-height: 82px;
+  --header-height: 0;
+  --footer-height: 0;
 }
 
 // Note: Modal will be full screen on mobile

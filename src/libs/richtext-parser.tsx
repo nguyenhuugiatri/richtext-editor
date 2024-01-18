@@ -96,25 +96,25 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
         </p>
       )
 
-    case 'image':
+    case 'image': {
       return (
         <div
           key={generateKey()}
           className={cn('flex shrink-0 flex-col items-center', className)}
-          style={{ width: input.width, height: input.height }}
+          style={css}
         >
           <img
             src={input.value}
-            className="rounded-12 object-cover"
-            style={css}
+            className="h-full w-full rounded-12 object-cover"
           />
           {input.description && (
-            <span className="text-body-s text-text-color-subdued">
+            <span className="mt-8 text-body-s text-text-color-subdued">
               {input.description}
             </span>
           )}
         </div>
       )
+    }
 
     case 'row':
       return (
@@ -172,8 +172,15 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
   }
 }
 
-export const JSONToJSX = (json: Content | Content[]) => (
-  <div className="flex flex-col space-y-32 text-body-s text-text-color-subdued sm:text-body-m">
-    {convertToJSX(json)}
-  </div>
-)
+export const JSONToJSX = (json: string) => {
+  try {
+    const object = JSON.parse(json)
+    return (
+      <div className="flex flex-col space-y-32 text-body-s text-text-color-subdued sm:text-body-m">
+        {convertToJSX(object)}
+      </div>
+    )
+  } catch {
+    return json
+  }
+}
