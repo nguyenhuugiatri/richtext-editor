@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 import uniqueId from 'lodash.uniqueid'
 import NextLink from 'next/link'
 import type { CSSProperties } from 'react'
@@ -36,11 +37,13 @@ type Image = ElementProps & {
 
 type Row = ElementProps & {
   type: 'row'
+  gap?: number
   value: Content | Content[]
 }
 
 type Col = ElementProps & {
   type: 'col'
+  gap?: number
   value: Content | Content[]
 }
 
@@ -50,9 +53,13 @@ type Card = ElementProps & {
   title: Texts
   subtitle: Texts
   description: Texts
+  postDescription: Texts
 }
 
 type Content = Texts | Image | Row | Col | Card
+
+export const supportedGaps =
+  'space-x-4 space-x-8 space-x-12 space-x-16 space-x-24 space-x-32 space-y-4 space-y-8 space-y-12 space-y-16 space-y-24 space-y-32'
 
 export function convertToJSX(input: Content | Content[]): React.ReactNode {
   const generateKey = (): string => uniqueId()
@@ -80,7 +87,10 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
         <>
           <NextLink
             key={generateKey()}
-            className={cn('text-text-color-highlight underline', className)}
+            className={cn(
+              'text-body-s text-text-color-highlight underline sm:text-body-m',
+              className
+            )}
             target="_blank"
             href={input.href}
             style={css}
@@ -105,7 +115,10 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
       return (
         <div
           key={generateKey()}
-          className={cn('flex shrink-0 flex-col items-center', className)}
+          className={cn(
+            'flex w-full shrink-0 flex-col items-center',
+            className
+          )}
           style={css}
         >
           <img
@@ -121,24 +134,45 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
       )
     }
 
-    case 'row':
-      return (
-        <div key={generateKey()} className={cn('flex', className)} style={css}>
-          {convertToJSX(input.value)}
-        </div>
-      )
+    case 'row': {
+      const { gap, ...rest } = css
 
-    case 'col':
       return (
         <div
           key={generateKey()}
-          className={cn('flex flex-col', className)}
-          style={css}
+          className={cn(
+            'flex w-full',
+            {
+              [`space-x-${gap}`]: gap,
+            },
+            className
+          )}
+          style={rest}
         >
           {convertToJSX(input.value)}
         </div>
       )
+    }
 
+    case 'col': {
+      const { gap, ...rest } = css
+
+      return (
+        <div
+          key={generateKey()}
+          className={cn(
+            'flex flex-col',
+            {
+              [`space-y-${gap}`]: gap,
+            },
+            className
+          )}
+          style={rest}
+        >
+          {convertToJSX(input.value)}
+        </div>
+      )
+    }
     case 'card':
       return (
         <div
@@ -167,19 +201,28 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
                     'mb-4 lg:mb-12 text-h6 sm:text-h4 text-text-color-default',
                   value: input.title,
                 })}
-            {typeof input.subtitle === 'string'
-              ? convertToJSX({
-                  type: 'words',
-                  className: 'mb-8',
-                  value: input.subtitle,
-                })
-              : convertToJSX({
-                  type: 'paraph',
-                  className: 'mb-8',
-                  value: input.subtitle,
-                })}
-            <div className="flex flex-col space-y-4">
-              {convertToJSX(input.description)}
+            <div className="flex flex-col space-y-8">
+              {input.subtitle && (
+                <>
+                  {typeof input.subtitle === 'string'
+                    ? convertToJSX({
+                        type: 'words',
+                        className: 'text-body-s sm:text-body-m',
+                        value: input.subtitle,
+                      })
+                    : convertToJSX({
+                        type: 'paraph',
+                        className: 'text-body-s sm:text-body-m',
+                        value: input.subtitle,
+                      })}
+                </>
+              )}
+              {input.description && (
+                <div>{convertToJSX(input.description)}</div>
+              )}
+              {input.postDescription && (
+                <div>{convertToJSX(input.postDescription)}</div>
+              )}
             </div>
           </div>
         </div>
