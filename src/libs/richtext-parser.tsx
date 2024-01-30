@@ -5,7 +5,53 @@ import type { CSSProperties } from 'react'
 
 import { cn } from '@/styles/utils'
 
-type ElementProps = CSSProperties & {
+const WHITELISTED_DOMAIN_ARRAY = ['playwildforest.io']
+const WHITELISTED_CSS = [
+  'width',
+  'maxWidth',
+  'minWidth',
+  'height',
+  'minHeight',
+  'maxHeight',
+  'fontSize',
+  'fontWeight',
+  'color',
+  'backgroundColor',
+  'textDecoration',
+  'padding',
+  'paddingTop',
+  'paddingRight',
+  'paddingBottom',
+  'paddingLeft',
+  'margin',
+  'marginTop',
+  'marginRight',
+  'marginBottom',
+  'marginLeft',
+  'display',
+  'flexDirection',
+  'justifyContent',
+  'alignItems',
+  'gridTemplateColumns',
+  'gridTemplateRows',
+  'gap',
+  'rowGap',
+  'columnGap',
+  'borderRadius',
+  'border',
+  'borderTop',
+  'borderRight',
+  'borderBottom',
+  'borderLeft',
+  'objectFit',
+] as const
+
+type WhitelistedCSSProperties = Pick<
+  CSSProperties,
+  (typeof WHITELISTED_CSS)[number]
+>
+
+type ElementProps = WhitelistedCSSProperties & {
   className?: string
 }
 
@@ -59,7 +105,23 @@ type Card = ElementProps & {
 type Content = Texts | Image | Row | Col | Card
 
 export const supportedGaps =
-  'space-x-4 space-x-8 space-x-12 space-x-16 space-x-24 space-x-32 space-y-4 space-y-8 space-y-12 space-y-16 space-y-24 space-y-32'
+  'space-x-2 space-x-4 space-x-8 space-x-12 space-x-16 space-x-24 space-x-32 space-y-2 space-y-4 space-y-8 space-y-12 space-y-16 space-y-24 space-y-32'
+
+const filterCSS = (css: CSSProperties) => {
+  return Object.keys(css).reduce<WhitelistedCSSProperties>(
+    (acc: WhitelistedCSSProperties, key: string) => {
+      if (WHITELISTED_CSS.includes(key as (typeof WHITELISTED_CSS)[number])) {
+        const value = css[key as keyof CSSProperties]
+        return {
+          ...acc,
+          [key]: value,
+        }
+      }
+      return acc
+    },
+    {}
+  )
+}
 
 export function convertToJSX(input: Content | Content[]): React.ReactNode {
   const generateKey = (): string => uniqueId()
@@ -71,18 +133,40 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
   if (!input || !input.type) return null
 
   const { type, className, ...css } = input
+  const filteredCSS = filterCSS(css)
 
   switch (type) {
-    case 'words':
+    case 'words': {
       return (
         <>
-          <span key={generateKey()} className={className} style={css}>
+          <span key={generateKey()} className={className} style={filteredCSS}>
             {input.value}
           </span>{' '}
         </>
       )
+    }
 
-    case 'link':
+    case 'link': {
+      if (!input.href) return null
+
+      const isWhitelistedDomain = () => {
+        try {
+          const { hostname } = new URL(input.href)
+          const latestDomain = hostname.split('.').slice(-2).join('.')
+          const isSkyMavisDomain = [
+            'skymavis.com',
+            'axieinfinity.com',
+          ].includes(latestDomain)
+          const isWhitelistedExternalDomain =
+            WHITELISTED_DOMAIN_ARRAY.includes(latestDomain)
+          return isSkyMavisDomain || isWhitelistedExternalDomain
+        } catch {
+          return false
+        }
+      }
+
+      if (!isWhitelistedDomain()) return null
+
       return (
         <>
           <NextLink
@@ -93,23 +177,25 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
             )}
             target="_blank"
             href={input.href}
-            style={css}
+            style={filteredCSS}
           >
             {input.value}
           </NextLink>{' '}
         </>
       )
+    }
 
-    case 'paraph':
+    case 'paraph': {
       return (
         <p
           className={cn('text-body-s sm:text-body-m', className)}
           key={generateKey()}
-          style={css}
+          style={filteredCSS}
         >
           {convertToJSX(input.value)}
         </p>
       )
+    }
 
     case 'image': {
       return (
@@ -119,7 +205,7 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
             'flex w-full shrink-0 flex-col items-center',
             className
           )}
-          style={css}
+          style={filteredCSS}
         >
           <img
             src={input.value}
@@ -135,7 +221,7 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
     }
 
     case 'row': {
-      const { gap, ...rest } = css
+      const { gap } = input
 
       return (
         <div
@@ -147,7 +233,7 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
             },
             className
           )}
-          style={rest}
+          style={filteredCSS}
         >
           {convertToJSX(input.value)}
         </div>
@@ -155,7 +241,7 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
     }
 
     case 'col': {
-      const { gap, ...rest } = css
+      const { gap } = input
 
       return (
         <div
@@ -167,7 +253,7 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
             },
             className
           )}
-          style={rest}
+          style={filteredCSS}
         >
           {convertToJSX(input.value)}
         </div>
@@ -182,7 +268,7 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
           {typeof input.image === 'string'
             ? convertToJSX({
                 type: 'image',
-                width: 240,
+                width: 260,
                 objectFit: 'cover',
                 value: input.image,
               })

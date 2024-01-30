@@ -3,6 +3,219 @@
     "type": "col",
     "value": [
       {
+        "type": "words",
+        "value": "This is the first series of Wild Forest packs exclusive to Beta players."
+      },
+      {
+        "type": "words",
+        "value": "The Founder Pack offers:"
+      }
+    ]
+  },
+  {
+    "type": "card",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602279-all-4-lordsx3.png",
+    "title": "1 Guaranteed Lord NFT",
+    "description": {
+      "type": "col",
+      "gap": 2,
+      "value": [
+        {
+          "type": "paraph",
+          "fontWeight": 700,
+          "value": [
+            {
+              "type": "words",
+              "value": "Rare",
+              "color": "#0FA9FD"
+            },
+            {
+              "type": "words",
+              "value": ": 65%"
+            }
+          ]
+        },
+        {
+          "type": "paraph",
+          "fontWeight": 700,
+          "value": [
+            {
+              "type": "words",
+              "value": "Epic",
+              "color": "#9976FC"
+            },
+            {
+              "type": "words",
+              "value": ": 20%"
+            }
+          ]
+        },
+        {
+          "type": "paraph",
+          "fontWeight": 700,
+          "value": [
+            {
+              "type": "words",
+              "value": "Legendary",
+              "color": "#D89C00"
+            },
+            {
+              "type": "words",
+              "value": ": 10%"
+            }
+          ]
+        },
+        {
+          "type": "paraph",
+          "fontWeight": 700,
+          "value": [
+            {
+              "type": "words",
+              "value": "Mystic",
+              "color": "#197eda"
+            },
+            {
+              "type": "words",
+              "value": ": 5%"
+            }
+          ]
+        }
+      ]
+    },
+    "postDescription": {
+      "type": "paraph",
+      "value": [
+        {
+          "type": "paraph",
+          "value": "A limited collection of 5000 VIP badges honoring our early supporters. Lord owners will get exclusive perks and priority access to all Wild Forest events."
+        },
+        {
+          "type": "link",
+          "href": "https://playwildforest.io/lord-nft",
+          "value": "Learn more about Lords NFT"
+        }
+      ]
+    }
+  },
+  {
+    "type": "card",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602288-all-rarex3.png",
+    "title": "20 random Rare Unit NFTs",
+    "description": [
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "20 x"
+          },
+          {
+            "type": "words",
+            "value": "Rare",
+            "color": "#0AD2FF"
+          }
+        ]
+      }
+    ],
+    "postDescription": {
+      "type": "paraph",
+      "value": [
+        {
+          "type": "paraph",
+          "value": [
+            {
+              "type": "words",
+              "value": "Please note: Unit NFTs are"
+            },
+            {
+              "type": "words",
+              "value": "NOT",
+              "color": "white",
+              "fontWeight": 700
+            },
+            {
+              "type": "words",
+              "value": "usable in Beta."
+            }
+          ]
+        },
+        {
+          "type": "paraph",
+          "value": [
+            {
+              "type": "words",
+              "value": "But can be traded on the"
+            },
+            {
+              "type": "link",
+              "value": "Mavis Market",
+              "href": "https://marketplace.skymavis.com"
+            },
+            {
+              "type": "words",
+              "value": "and will be usable in the Wild Forest Mainnet after the game launches in early Q2."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "card",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602311-founder-skinx3.png",
+    "title": "2 random Legendary Royal Guards Skin NFT",
+    "description": [
+      {
+        "type": "paraph",
+        "fontWeight": 700,
+        "value": [
+          {
+            "type": "words",
+            "value": "2 x"
+          },
+          {
+            "type": "words",
+            "value": "Legendary",
+            "color": "#D89C00"
+          }
+        ]
+      }
+    ],
+    "postDescription": {
+      "type": "paraph",
+      "value": [
+        {
+          "type": "paraph",
+          "value": [
+            {
+              "type": "words",
+              "value": "Please note: The"
+            },
+            {
+              "type": "words",
+              "value": "Royal Guards",
+              "color": "white",
+              "fontWeight": 700
+            },
+            {
+              "type": "words",
+              "value": "set is exclusive to this Beta packs series, and includes 4 unique skins for Archer, Swordsman, Sniper, and Knight."
+            }
+          ]
+        },
+        {
+          "type": "paraph",
+          "value": "Only 1000 of each Legendary skin will ever exist, making 1000 sets."
+        }
+      ]
+    }
+  },
+  "--- TEST ---",
+  {
+    "type": "col",
+    "value": [
+      {
         "type": "paraph",
         "value": [
           {
@@ -63,256 +276,5 @@
         "paddingLeft": 16
       }
     ]
-  },
-  {
-    "type": "col",
-    "value": [
-      {
-        "type": "words",
-        "value": "This is the first series of Wild Forest packs exclusive to Beta players."
-      },
-      {
-        "type": "words",
-        "value": "The Premium Pack offers:"
-      }
-    ]
-  },
-  {
-    "type": "card",
-    "image": "https://storage.googleapis.com/sm-dev-ecosystem-portal/dev/1706400543-4-lords-2.png",
-    "title": "A 33% chance to get the Lord NFT",
-    "description": {
-      "type": "col",
-      "gap": 4,
-      "value": [
-        {
-          "type": "paraph",
-          "fontWeight": 700,
-          "value": [
-            {
-              "type": "words",
-              "value": "Rare",
-              "color": "#0FA9FD"
-            },
-            {
-              "type": "words",
-              "value": ": 21.6%"
-            }
-          ]
-        },
-        {
-          "type": "paraph",
-          "fontWeight": 700,
-          "value": [
-            {
-              "type": "words",
-              "value": "Epic",
-              "color": "#9976FC"
-            },
-            {
-              "type": "words",
-              "value": ": 5.8%"
-            }
-          ]
-        },
-        {
-          "type": "paraph",
-          "fontWeight": 700,
-          "value": [
-            {
-              "type": "words",
-              "value": "Legendary",
-              "color": "#D89C00"
-            },
-            {
-              "type": "words",
-              "value": ": 3.15%"
-            }
-          ]
-        },
-        {
-          "type": "paraph",
-          "fontWeight": 700,
-          "value": [
-            {
-              "type": "words",
-              "value": "Mystic",
-              "color": "#197eda"
-            },
-            {
-              "type": "words",
-              "value": ": 2.34%"
-            }
-          ]
-        }
-      ]
-    },
-    "postDescription": {
-      "type": "paraph",
-      "value": [
-        {
-          "type": "paraph",
-          "value": "A limited collection of 5000 VIP badges honoring our early supporters. Lord owners will get exclusive perks and priority access to all Wild Forest events."
-        },
-        {
-          "type": "link",
-          "href": "https://playwildforest.io/lord-nft",
-          "value": "Learn more about Lords NFT"
-        }
-      ]
-    }
-  },
-  {
-    "type": "card",
-    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1705509216-21.png",
-    "title": "20 random Unit NFTs",
-    "description": [
-      {
-        "type": "paraph",
-        "fontWeight": 700,
-        "value": [
-          {
-            "type": "words",
-            "value": "10 x"
-          },
-          {
-            "type": "words",
-            "value": "Common",
-            "color": "white"
-          },
-          {
-            "type": "words",
-            "value": "or"
-          },
-          {
-            "type": "words",
-            "value": "Uncommon",
-            "color": "#46F29A"
-          }
-        ]
-      },
-      {
-        "type": "paraph",
-        "fontWeight": 700,
-        "value": [
-          {
-            "type": "words",
-            "value": "10 x"
-          },
-          {
-            "type": "words",
-            "value": "Rare",
-            "color": "#0AD2FF"
-          }
-        ]
-      }
-    ],
-    "postDescription": {
-      "type": "paraph",
-      "value": [
-        {
-          "type": "paraph",
-          "value": [
-            {
-              "type": "words",
-              "value": "Please note: Unit NFTs are"
-            },
-            {
-              "type": "words",
-              "value": "NOT",
-              "color": "white",
-              "fontWeight": 700
-            },
-            {
-              "type": "words",
-              "value": "usable in Beta."
-            }
-          ]
-        },
-        {
-          "type": "paraph",
-          "value": [
-            {
-              "type": "words",
-              "value": "But can be traded on the"
-            },
-            {
-              "type": "link",
-              "value": "Mavis Market",
-              "href": "https://marketplace.skymavis.com"
-            },
-            {
-              "type": "words",
-              "value": "and will be usable in the Wild Forest Mainnet after the game launches in early Q2."
-            }
-          ]
-        }
-      ]
-    }
-  },
-  {
-    "type": "card",
-    "image": "https://storage.googleapis.com/sm-dev-ecosystem-portal/dev/1706400618-premium-skin.png",
-    "title": "1 random Royal Guards Skin NFT",
-    "description": [
-      {
-        "type": "paraph",
-        "fontWeight": 700,
-        "value": [
-          {
-            "type": "words",
-            "value": "Epic",
-            "color": "#9976FC"
-          },
-          {
-            "type": "words",
-            "value": ": 70%"
-          }
-        ]
-      },
-      {
-        "type": "paraph",
-        "fontWeight": 700,
-        "value": [
-          {
-            "type": "words",
-            "value": "Legendary",
-            "color": "#D89C00"
-          },
-          {
-            "type": "words",
-            "value": ": 30%"
-          }
-        ]
-      }
-    ],
-    "postDescription": {
-      "type": "paraph",
-      "value": [
-        {
-          "type": "paraph",
-          "value": [
-            {
-              "type": "words",
-              "value": "Please note: The"
-            },
-            {
-              "type": "words",
-              "value": "Royal Guards",
-              "color": "white",
-              "fontWeight": 700
-            },
-            {
-              "type": "words",
-              "value": "set is exclusive to this Beta packs series, and includes 4 unique skins for Archer, Swordsman, Sniper, and Knight."
-            }
-          ]
-        },
-        {
-          "type": "paraph",
-          "value": "Only 1000 of each Legendary skin will ever exist, making 1000 sets."
-        }
-      ]
-    }
   }
 ]

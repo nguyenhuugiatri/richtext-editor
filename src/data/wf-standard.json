@@ -14,7 +14,7 @@
   },
   {
     "type": "card",
-    "image": "https://storage.googleapis.com/sm-dev-ecosystem-portal/dev/1706400543-4-lords-2.png",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602267-3-lordsx3.png",
     "title": "A 5% chance to get the Lord NFT",
     "description": {
       "type": "col",
@@ -84,7 +84,7 @@
   },
   {
     "type": "card",
-    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1705509216-21.png",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602716-com-un-rarex3.png",
     "title": "10 random Unit NFTs",
     "description": [
       {
@@ -172,7 +172,7 @@
   },
   {
     "type": "card",
-    "image": "https://storage.googleapis.com/sm-dev-ecosystem-portal/dev/1706400656-standart_skin.png",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602876-standart-skinx3.png",
     "title": "1 random Royal Guards Skin NFT",
     "description": [
       {

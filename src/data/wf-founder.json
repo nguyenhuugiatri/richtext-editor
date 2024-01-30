@@ -14,7 +14,7 @@
   },
   {
     "type": "card",
-    "image": "https://storage.googleapis.com/sm-dev-ecosystem-portal/dev/1706400543-4-lords-2.png",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602279-all-4-lordsx3.png",
     "title": "1 Guaranteed Lord NFT",
     "description": {
       "type": "col",
@@ -99,7 +99,7 @@
   },
   {
     "type": "card",
-    "image": "https://storage.googleapis.com/sm-dev-ecosystem-portal/dev/1706400690-rareskins.png",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602288-all-rarex3.png",
     "title": "20 random Rare Unit NFTs",
     "description": [
       {
@@ -163,7 +163,7 @@
   },
   {
     "type": "card",
-    "image": "https://storage.googleapis.com/sm-dev-ecosystem-portal/dev/1706400579-founder-skin.png",
+    "image": "https://storage.googleapis.com/sm-prod-ecosystem-portal/prod/1706602311-founder-skinx3.png",
     "title": "2 random Legendary Royal Guards Skin NFT",
     "description": [
       {
