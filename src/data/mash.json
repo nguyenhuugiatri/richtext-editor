@@ -1,0 +1,18 @@
+[
+  {
+    "type": "col",
+    "gap": 8,
+    "value": [
+      "200 Diamond",
+      {
+        "type": "col",
+        "value": [
+          "Diamond is the premium currency of Sky Smash. Diamond can be used to:",
+          "+ Convert into Sky Smash gold to buy consumable and cosmetics",
+          "+ Purchase FreeXP to level up and unlock special perks within Sky Smash",
+          "+ Purchase more Apple - Sky Smash's energy. Earn rewards while playing with Apple"
+        ]
+      }
+    ]
+  }
+]

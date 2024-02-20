@@ -95,6 +95,7 @@ type Col = ElementProps & {
 
 type Card = ElementProps & {
   type: 'card'
+  layout: 'col' | 'row'
   image: string | Image
   title: Texts
   subtitle: Texts
@@ -259,21 +260,37 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
         </div>
       )
     }
-    case 'card':
+    case 'card': {
+      const isVertical = input.layout === 'col'
+
       return (
         <div
           key={generateKey()}
-          className="flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-x-16 lg:space-y-0"
+          className={cn(
+            'flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-x-16 lg:space-y-0',
+            {
+              'lg:flex-col': isVertical,
+            },
+            className
+          )}
         >
-          {typeof input.image === 'string'
-            ? convertToJSX({
-                type: 'image',
-                width: 260,
-                objectFit: 'cover',
-                value: input.image,
-              })
-            : convertToJSX(input.image)}
-          <div className="flex flex-col">
+          {!isVertical && (
+            <>
+              {typeof input.image === 'string'
+                ? convertToJSX({
+                    type: 'image',
+                    width: 260,
+                    objectFit: 'cover',
+                    value: input.image,
+                  })
+                : convertToJSX(input.image)}
+            </>
+          )}
+          <div
+            className={cn('flex flex-col', {
+              'items-center': isVertical,
+            })}
+          >
             {typeof input.title === 'string'
               ? convertToJSX({
                   type: 'words',
@@ -287,6 +304,21 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
                     'mb-4 lg:mb-12 text-h6 sm:text-h4 text-text-color-default',
                   value: input.title,
                 })}
+
+            {isVertical && (
+              <>
+                {typeof input.image === 'string'
+                  ? convertToJSX({
+                      type: 'image',
+                      width: 360,
+                      marginBottom: 12,
+                      objectFit: 'cover',
+                      value: input.image,
+                    })
+                  : convertToJSX(input.image)}
+              </>
+            )}
+
             <div className="flex flex-col space-y-8">
               {input.subtitle && (
                 <>
@@ -313,6 +345,7 @@ export function convertToJSX(input: Content | Content[]): React.ReactNode {
           </div>
         </div>
       )
+    }
 
     default:
       return null

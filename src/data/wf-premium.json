@@ -15,7 +15,7 @@
   {
     "type": "card",
     "image": "https://cdn.skymavis.com/mavis-store/wild-forest/description/lordsx4.png",
-    "title": "A 33% chance to get the Lord NFT",
+    "title": "A 25% chance for Lord NFT",
     "description": {
       "type": "col",
       "gap": 4,
@@ -26,12 +26,12 @@
           "value": [
             {
               "type": "words",
-              "value": "Rare",
+              "value": "Rare:",
               "color": "#0FA9FD"
             },
             {
               "type": "words",
-              "value": ": 21.6%"
+              "value": "16.55%"
             }
           ]
         },
@@ -41,12 +41,12 @@
           "value": [
             {
               "type": "words",
-              "value": "Epic",
+              "value": "Epic:",
               "color": "#9976FC"
             },
             {
               "type": "words",
-              "value": ": 5.8%"
+              "value": "4.35%"
             }
           ]
         },
@@ -56,12 +56,12 @@
           "value": [
             {
               "type": "words",
-              "value": "Legendary",
+              "value": "Legendary:",
               "color": "#D89C00"
             },
             {
               "type": "words",
-              "value": ": 3.15%"
+              "value": "2.35%"
             }
           ]
         },
@@ -71,12 +71,12 @@
           "value": [
             {
               "type": "words",
-              "value": "Mystic",
+              "value": "Mystic:",
               "color": "#197eda"
             },
             {
               "type": "words",
-              "value": ": 2.34%"
+              "value": "1.75%"
             }
           ]
         }
@@ -87,12 +87,11 @@
       "value": [
         {
           "type": "paraph",
-          "value": "A limited collection of 5000 VIP badges honoring our early supporters. Lord owners will get exclusive perks and priority access to all Wild Forest events."
+          "value": "A limited collection of 5,000 VIP badges honoring our early supporters."
         },
         {
-          "type": "link",
-          "href": "https://playwildforest.io/lord-nft",
-          "value": "Learn more about Lords NFT"
+          "type": "paraph",
+          "value": "Lord owners will get exclusive perks and priority access to all Wild Forest events."
         }
       ]
     }
@@ -100,7 +99,7 @@
   {
     "type": "card",
     "image": "https://cdn.skymavis.com/mavis-store/wild-forest/description/com-un-rare.png",
-    "title": "20 random Unit NFTs",
+    "title": "20 random mainnet Unit NFTs",
     "description": [
       {
         "type": "paraph",
@@ -150,7 +149,7 @@
           "value": [
             {
               "type": "words",
-              "value": "Please note: Unit NFTs are"
+              "value": "Mainnet Unit NFTs are"
             },
             {
               "type": "words",
@@ -169,7 +168,7 @@
           "value": [
             {
               "type": "words",
-              "value": "But can be traded on the"
+              "value": "Can be traded on the"
             },
             {
               "type": "link",
@@ -178,7 +177,7 @@
             },
             {
               "type": "words",
-              "value": "and will be usable in the Wild Forest Mainnet after the game launches in early Q2."
+              "value": "and will be playable after Wild Forest launch."
             }
           ]
         }
@@ -187,8 +186,9 @@
   },
   {
     "type": "card",
+    "layout": "col",
     "image": "https://cdn.skymavis.com/mavis-store/wild-forest/description/premium-skin.png",
-    "title": "1 random Royal Guards Skin NFT",
+    "title": "Exclusive Royal Guard Skin NFT",
     "description": [
       {
         "type": "paraph",
@@ -196,12 +196,12 @@
         "value": [
           {
             "type": "words",
-            "value": "Epic",
+            "value": "Epic:",
             "color": "#9976FC"
           },
           {
             "type": "words",
-            "value": ": 70%"
+            "value": "70%"
           }
         ]
       },
@@ -211,12 +211,12 @@
         "value": [
           {
             "type": "words",
-            "value": "Legendary",
+            "value": "Legendary:",
             "color": "#D89C00"
           },
           {
             "type": "words",
-            "value": ": 30%"
+            "value": "30%"
           }
         ]
       }
@@ -229,23 +229,43 @@
           "value": [
             {
               "type": "words",
-              "value": "Please note: The"
+              "value": "Only 5,000 sets of"
             },
             {
               "type": "words",
-              "value": "Royal Guards",
+              "value": "Royal Guards Skin",
               "color": "white",
               "fontWeight": 700
             },
             {
               "type": "words",
-              "value": "set is exclusive to this Beta packs series, and includes 4 unique skins for Archer, Swordsman, Sniper, and Knight."
+              "value": "NFTs will ever exist:"
+            },
+            {
+              "type": "words",
+              "value": "1,000 Legendary",
+              "color": "white",
+              "fontWeight": 700
+            },
+            {
+              "type": "words",
+              "value": "sets and"
+            },
+            {
+              "type": "words",
+              "value": "4,000 Epic",
+              "color": "white",
+              "fontWeight": 700
+            },
+            {
+              "type": "words",
+              "value": "sets."
             }
           ]
         },
         {
           "type": "paraph",
-          "value": "Only 1000 of each Legendary skin will ever exist, making 1000 sets."
+          "value": "A total of 20,000 Skin NFTs will be exclusively offered in early Sale Packs."
         }
       ]
     }
